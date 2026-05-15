@@ -71,15 +71,19 @@ export default {
       });
     }
 
-    // Field names match the form fields in pervasive_insights_site.html
+    // Field names match the form fields in index.html. The current form uses
+    // `topic` for the message body ("What would you most want to ask your
+    // panel about?"); accept either `message` or `topic` for forward compat.
     const name = sanitize(payload.name);
     const email = sanitize(payload.email);
     const company = sanitize(payload.company);
-    const message = sanitizeMessage(payload.message);
+    const message = sanitizeMessage(payload.message || payload.topic);
 
-    if (!name || !email || !message) {
+    // Only name + email are hard-required; message/topic is optional (user
+    // may submit a meeting-request with no question body yet).
+    if (!name || !email) {
       return new Response(
-        JSON.stringify({ error: "Name, email, and message are required" }),
+        JSON.stringify({ error: "Name and email are required" }),
         {
           status: 400,
           headers: { ...corsHeaders(origin), "Content-Type": "application/json" },
@@ -110,8 +114,8 @@ export default {
         `Email:   ${email}`,
         `Company: ${company || "(not provided)"}`,
         ``,
-        `Message:`,
-        message,
+        `What they want to ask their panel about:`,
+        message || "(no message provided)",
         ``,
         `---`,
         `Reply directly to ${email}.`,
