@@ -1,0 +1,16 @@
+name = "pi-contact-form"
+main = "pi-contact-form.js"
+compatibility_date = "2026-05-15"
+compatibility_flags = ["nodejs_compat"]
+
+# Email Workers binding - sends mail through Cloudflare's built-in email infra.
+# REQUIRES: destination address verified at
+#   Cloudflare Dashboard → Email → Email Routing → Destination Addresses
+# (one-time, ~30 seconds, click verify link in your inbox)
+[[send_email]]
+name = "PI_INBOX"
+destination_address = "popedome@gmail.com"
+
+# Optional env var override (also reads env.DESTINATION_EMAIL in code)
+[vars]
+DESTINATION_EMAIL = "popedome@gmail.com"
