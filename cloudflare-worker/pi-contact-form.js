@@ -95,7 +95,7 @@ export default {
       });
     }
 
-    const destinationAddress = env.DESTINATION_EMAIL || "popedome@gmail.com";
+    const destinationAddress = env.DESTINATION_EMAIL || "info@cityresearchsolutions.com";
 
     const msg = createMimeMessage();
     msg.setSender({ name: "Pervasive Insights Contact Form", addr: "noreply@pervasiveinsights.ai" });

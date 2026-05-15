@@ -9,8 +9,8 @@ compatibility_flags = ["nodejs_compat"]
 # (one-time, ~30 seconds, click verify link in your inbox)
 [[send_email]]
 name = "PI_INBOX"
-destination_address = "popedome@gmail.com"
+destination_address = "info@cityresearchsolutions.com"
 
 # Optional env var override (also reads env.DESTINATION_EMAIL in code)
 [vars]
-DESTINATION_EMAIL = "popedome@gmail.com"
+DESTINATION_EMAIL = "info@cityresearchsolutions.com"
