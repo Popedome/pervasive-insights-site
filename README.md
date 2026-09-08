@@ -75,4 +75,26 @@ CORS allowlist in the Worker includes:
 
 To test locally: `python -m http.server 8000` from this directory, then open http://localhost:8000.
 
-— Tucker, 2026-05-15
+— 2026-05-15
+
+---
+
+## 2026-06-02 content update
+
+Site recast around the **five portal areas in two families** (matching the live portal + Primex onboarding infographic):
+
+- **Your own research** — 1) Research Library, 2) Ask Your Data
+- **Your synthetic panel** — 3) One-on-One, 4) Surveys, 5) Focus Groups
+
+Changes: "What it is" rebuilt as two families / five tiles; "See it in action" now shows one deliverable-grade sample per area (Library synthesis with cited sources; Ask-Your-Data generated table; One-on-One persona chat; Survey concept test with a stimulus image grid; Focus Group transcript + report); added the **Calibration Report Card** to the Calibration-check section; receipts updated (358,000+ respondents across 150+ engagements, 6,000 calibrated identities, ~1,080 calibration targets, ~3.5pp). All samples are generic/illustrative — no client names, competitor brands, proprietary segment names, or pricing. Design system, contact form, and deploy steps unchanged.
+
+## 2026-06-02 visual polish
+
+Swapped the five area tiles to use the actual onboarding-infographic illustrations (pi_area_*.png), added green/orange family accents, upgraded the survey sample with cleaner product icons + faceted tabs, and added a subtle scroll-reveal (respects reduced-motion). Five new assets: pi_area_library/data/oneonone/survey/focusgroup.png.
+
+
+---
+
+## 2026-09-07 restructure
+
+The portal is now presented as one part of the **Pervasive Insights suite of City Research Solutions** (research library, calibrated synthetic panel, competitive intelligence). Added a `#suite` section before About with links to the three tool pages on cityresearchsolutions.com, a nav item "The full suite", one sentence in About, and a new footer line. The six SEO answer pages in `pervasiveinsights-ai-pages/` should be deployed under this site (see `README_FOR_DEPLOY.md` there). Deployment is Brian's, with Claude Code.
