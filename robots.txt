@@ -1,0 +1,17 @@
+# Pervasive Insights - allow AI answer engines and search crawlers
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: https://pervasiveinsights.ai/sitemap.xml
