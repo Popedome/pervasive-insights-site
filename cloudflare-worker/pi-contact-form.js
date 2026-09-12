@@ -79,6 +79,13 @@ export default {
     const company = sanitize(payload.company);
     const message = sanitizeMessage(payload.message || payload.topic);
 
+    // Attribution. `heard_about` is a required select on the form; the utm_* trio is
+    // captured from the query string into hidden fields and is absent on direct visits.
+    const heardAbout = sanitize(payload.heard_about);
+    const utmSource = sanitize(payload.utm_source);
+    const utmMedium = sanitize(payload.utm_medium);
+    const utmCampaign = sanitize(payload.utm_campaign);
+
     // Only name + email are hard-required; message/topic is optional (user
     // may submit a meeting-request with no question body yet).
     if (!name || !email) {
@@ -118,6 +125,11 @@ export default {
         message || "(no message provided)",
         ``,
         `---`,
+        `Heard about us: ${heardAbout || "(not provided)"}`,
+        `utm_source:     ${utmSource || "(none)"}`,
+        `utm_medium:     ${utmMedium || "(none)"}`,
+        `utm_campaign:   ${utmCampaign || "(none)"}`,
+        ``,
         `Reply directly to ${email}.`,
       ].join("\n"),
     });

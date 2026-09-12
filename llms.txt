@@ -1,0 +1,23 @@
+# Pervasive Insights
+
+> A synthetic research panel built on a client's own human research: a searchable library of every study the client has run, and synthetic respondents calibrated to how that client's real customers answered, with the error reported topic by topic. A City Research Solutions product (consumer research since 1979, Middleton, Wisconsin).
+
+## Key facts
+- Calibration is per client and per study; one client's data never trains a panel for another.
+- Every result carries a calibration status. Uncalibrated topics return a blank, not a guess. Results outside the human range are held for review.
+- Human ceiling: two random halves of the same survey agree within 5 points on about 85% of answers (58 studies, 41,340 pairs). Synthetic accuracy is always reported next to that number.
+- Not for: high-stakes go/no-go decisions, regulated or legal claims, novel topics with no calibration data.
+
+## Pages
+- [What is Pervasive Insights?](https://pervasiveinsights.ai/what-is-pervasive-insights): the three parts, who it is for, how it relates to human research.
+- [How accurate are synthetic respondents?](https://pervasiveinsights.ai/synthetic-research-accuracy): calibration gaps by topic, the human ceiling, the no-fabrication rule.
+- [How does calibration work?](https://pervasiveinsights.ai/synthetic-panel-calibration): inputs, outputs, report card.
+- [How much research do you need?](https://pervasiveinsights.ai/how-much-research-do-you-need): archive tiers, onboarding surveys, cold start.
+- [Synthetic vs. traditional panels](https://pervasiveinsights.ai/synthetic-vs-traditional-panels): speed, fit, what not to use it for.
+- [Synthetic research for CPG](https://pervasiveinsights.ai/synthetic-research-cpg): concept, pack, claim and price screening between trackers.
+- [Methodology Q&A](https://pervasiveinsights.ai/synthetic-panel-methodology-qa): Type 1 vs Type 2 synthetic sample, segment-gap ratio, fidelity levels, stability, labeling.
+- [ESOMAR 20 questions, answered](https://pervasiveinsights.ai/esomar-20-questions)
+- [What to ask any synthetic research vendor](https://pervasiveinsights.ai/questions-to-ask-a-synthetic-research-vendor)
+
+## Contact
+https://pervasiveinsights.ai/#contact · info@cityresearchsolutions.com · +1 608-314-8493

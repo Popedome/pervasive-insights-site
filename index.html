@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pervasive Insights™ | Synthetic research that answers like your customers</title>
+<meta name="description" content="A synthetic research panel built on your own human research: every study you have run made searchable, plus respondents calibrated to your real customers.">
+<title>Pervasive Insights™ | A synthetic research panel built on human insights</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -298,8 +299,8 @@
   .contact-form { max-width: 620px; background: var(--card-bg); border-radius: 6px; padding: 36px; color: var(--text-on-card); box-shadow: 0 18px 44px rgba(0,0,0,0.35); }
   .contact-form .field { margin-bottom: 18px; }
   .contact-form label { display: block; font-size: 12.5px; color: var(--navy); font-weight: 700; text-transform: uppercase; letter-spacing: 0.7px; margin-bottom: 6px; }
-  .contact-form input, .contact-form textarea { width: 100%; padding: 11px 14px; border: 1px solid var(--border-light); border-radius: 4px; font-family: inherit; font-size: 14.5px; color: var(--text-on-card); background: var(--card-bg-tinted); transition: border-color 0.15s, background 0.15s; }
-  .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--blue); background: #fff; }
+  .contact-form input, .contact-form select, .contact-form textarea { width: 100%; padding: 11px 14px; border: 1px solid var(--border-light); border-radius: 4px; font-family: inherit; font-size: 14.5px; color: var(--text-on-card); background: var(--card-bg-tinted); transition: border-color 0.15s, background 0.15s; }
+  .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { outline: none; border-color: var(--blue); background: #fff; }
   .contact-form textarea { min-height: 96px; resize: vertical; }
   .contact-form button { background: var(--navy); color: #fff; border: none; padding: 13px 28px; border-radius: 4px; font-size: 14.5px; font-weight: 600; cursor: pointer; transition: background 0.15s; }
   .contact-form button:hover { background: var(--blue); }
@@ -346,12 +347,83 @@
     .steps { grid-template-columns: 1fr 1fr; gap: 24px; }
     .receipts { grid-template-columns: 1fr 1fr; }
     .about-grid { grid-template-columns: 1fr; }
-    .nav .links { display: none; }
+  
+  .nav-questions { position: relative; }
+  .nav-questions > button { background: none; border: none; padding: 0; cursor: pointer; font-family: inherit;
+    color: var(--text-light-muted); font-size: 14px; font-weight: 500; letter-spacing: 0.2px; transition: color 0.15s; }
+  .nav-questions > button::after { content: " \25BE"; font-size: 10px; }
+  .nav-questions:hover > button, .nav-questions:focus-within > button { color: var(--text-light); }
+  .nav-questions-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+    margin-top: 10px; min-width: 300px; background: var(--bg-alt); border: 1px solid var(--border-dark);
+    border-radius: 6px; padding: 8px 0; box-shadow: 0 18px 44px rgba(0,0,0,0.45); z-index: 200; }
+  .nav-questions:hover .nav-questions-menu, .nav-questions:focus-within .nav-questions-menu { display: block; }
+  .nav-questions-menu a { display: block; padding: 9px 18px; font-size: 13.5px; white-space: nowrap; }
+  .nav-questions-menu a:hover { color: var(--text-light); background: rgba(93,196,255,0.08); }
+  @media (max-width: 900px) { .nav-questions { display: none; } }
+  .nav .links { display: none; }
     section { padding: 64px 24px; }
     .family.f-research, .family.f-panel, .samples-fam.f-research, .samples-fam.f-panel { padding-left: 16px; }
     .tile-illo { width: 76px; height: 76px; }
   }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Pervasive Insights",
+  "alternateName": "Pervasive Insights by City Research Solutions",
+  "url": "https://pervasiveinsights.ai/",
+  "logo": "https://pervasiveinsights.ai/site_pi_logo.svg",
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "City Research Solutions LLC",
+    "url": "https://cityresearchsolutions.com/",
+    "foundingDate": "1979",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "8383 Greenway Blvd, Suite 600",
+      "addressLocality": "Middleton",
+      "addressRegion": "WI",
+      "postalCode": "53562",
+      "addressCountry": "US"
+    },
+    "telephone": "+1-608-314-8493",
+    "email": "info@cityresearchsolutions.com"
+  },
+  "description": "A synthetic research panel built on a client's own human research: a searchable library of every study the client has run, and synthetic respondents calibrated to how that client's real customers answered, with the error reported topic by topic."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Pervasive Insights",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "url": "https://pervasiveinsights.ai/",
+  "provider": {
+    "@type": "Organization",
+    "name": "City Research Solutions LLC"
+  },
+  "description": "Synthetic consumer research panel calibrated to a client's own fielded studies. Searchable research library, calibrated synthetic respondents, fast-turn simulated surveys and focus groups, with calibration error reported by marketing topic area.",
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock",
+    "url": "https://pervasiveinsights.ai/#contact"
+  }
+}
+</script>
+<script src="/config.js"></script>
+<script>
+(function(){var c=window.PI_CONFIG||{};
+ if(c.GOOGLE_SITE_VERIFICATION){var m=document.createElement('meta');m.name='google-site-verification';m.content=c.GOOGLE_SITE_VERIFICATION;document.head.appendChild(m);}
+ if(c.BING_SITE_VERIFICATION){var m2=document.createElement('meta');m2.name='msvalidate.01';m2.content=c.BING_SITE_VERIFICATION;document.head.appendChild(m2);}
+ window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;
+ if(c.GA_MEASUREMENT_ID){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+c.GA_MEASUREMENT_ID;document.head.appendChild(s);gtag('js',new Date());gtag('config',c.GA_MEASUREMENT_ID);}
+ if(c.UET_TAG_ID){(function(w,d,t,r,u){w[u]=w[u]||[];w[u].push({ti:c.UET_TAG_ID,enableAutoSpaTracking:true});var f=d.getElementsByTagName(t)[0],j=d.createElement(t);j.async=1;j.src='//bat.bing.com/bat.js';f.parentNode.insertBefore(j,f);})(window,document,'script',null,'uetq');}
+ if(c.OPENAI_PIXEL_ID){var o=document.createElement('script');o.async=true;o.src='https://d.openai.com/pixel.js?id='+c.OPENAI_PIXEL_ID;document.head.appendChild(o);}
+})();
+</script>
 </head>
 <body>
 
@@ -364,7 +436,7 @@
       <a href="#samples">See it in action</a>
       <a href="#comparison">Calibration check</a>
       <a href="#how">How it works</a>
-      <a href="#suite">The full suite</a>
+      <div class="nav-questions"><button type="button" aria-expanded="false" aria-haspopup="true">Questions</button><div class="nav-questions-menu"><a href="/what-is-pervasive-insights">What is Pervasive Insights?</a><a href="/synthetic-research-accuracy">How accurate are synthetic respondents?</a><a href="/synthetic-panel-calibration">How does calibration work?</a><a href="/how-much-research-do-you-need">How much research do you need?</a><a href="/synthetic-vs-traditional-panels">Synthetic vs. traditional panels</a><a href="/synthetic-research-cpg">Synthetic research for CPG</a><a href="/synthetic-panel-methodology-qa">Methodology Q&amp;A</a><a href="/esomar-20-questions">ESOMAR 20 questions, answered</a><a href="/questions-to-ask-a-synthetic-research-vendor">What to ask any synthetic research vendor</a></div></div><a href="#suite">The full suite</a>
       <a href="#contact" class="cta">Schedule a walkthrough</a>
     </div>
   </div>
@@ -374,8 +446,9 @@
 <div class="hero">
   <div>
     <a href="https://cityresearchsolutions.com/pervasive-insights.html" class="hero-eyebrow">The AI suite of <strong>City Research Solutions</strong> &middot; human research since 1979 &rarr;</a>
-    <h1>Synthetic research that answers like your customers, <em>because it was built from them.</em></h1>
+    <h1>A synthetic research panel built on human insights.</h1>
     <p class="hero-kicker">Calibrated to your fielded studies, error published.</p>
+    <p class="sub pi-definition">Pervasive Insights™ is a synthetic research panel built on a client's own human research: a searchable library of every study the client has run, and synthetic respondents calibrated to how that client's real customers answered, with the error reported topic by topic. It is a City Research Solutions product. City Research has run consumer research since 1979.</p>
     <p class="sub">Most synthetic-consumer tools generate respondents from a demographic profile, with no evidence that they answer the way your actual customers do. <strong style="color: var(--accent); font-weight: 700; letter-spacing: 0.5px;">PERVASIVE INSIGHTS™</strong> is built the other way round: a synthetic panel calibrated to how <strong style="color: var(--text-light); font-weight: 700;">YOUR</strong> customers actually answered in 40+ years of human research, with the calibration error published topic by topic — plus every study you have ever run, in one searchable corpus. Interview it, survey it, or sit it around a table, in minutes.</p>
     <div class="cta-row">
       <a href="#contact" class="cta-primary">Schedule a 30-minute walkthrough</a>
@@ -638,6 +711,7 @@
     <div class="section-label">Calibration check</div>
     <h2 class="section-title">The question isn't "can you build a synthetic panel." It's "does it answer like my customers."</h2>
     <p class="section-intro">Anyone can stand up a synthetic panel. Pervasive Insights™ is calibrated to your own commissioned research — and the calibration is auditable. Your human data is layered into every result: where you have asked the same question before, the synthetic result comes back cell by cell against the human answer; where you have asked the same <em>type</em> of question many times, it is placed on the range your real customers gave, and anything outside that range is held for review rather than reported. Below: the same questions run through human respondents and through the synthetic panel. Distributions match within ~3 percentage points on every cell.</p>
+    <p class="section-intro pi-ceiling">For scale: when a real survey is split randomly in half, the two halves agree within 5 points on about 85% of answers (58 consumer studies, 41,340 answer pairs). No synthetic method can beat a human study against itself, and Pervasive Insights™ reports both numbers on the same report card.</p>
 
     <div class="comparison-grid">
       <div class="comparison-card">
@@ -919,12 +993,31 @@
         <label for="topic">What would you most want to ask your panel about?</label>
         <textarea id="topic" name="topic" placeholder="A new product concept, a positioning question, an ad reaction, a price test — whatever's top of mind."></textarea>
       </div>
+      <div class="field">
+        <label for="heard_about">How did you hear about us?</label>
+        <select id="heard_about" name="heard_about" required>
+          <option value="">Please choose one</option>
+          <option>ChatGPT</option>
+          <option>Claude</option>
+          <option>Perplexity</option>
+          <option>Google or Gemini</option>
+          <option>Microsoft Copilot</option>
+          <option>LinkedIn</option>
+          <option>Instagram</option>
+          <option>A colleague or client</option>
+          <option>Trade press or directory</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <input type="hidden" id="utm_source" name="utm_source">
+      <input type="hidden" id="utm_medium" name="utm_medium">
+      <input type="hidden" id="utm_campaign" name="utm_campaign">
       <button type="submit">Request a walkthrough</button>
     </form>
   </div>
 </section>
 
-<div class="answers-row"><span>Questions we get asked:</span><a href="/what-is-pervasive-insights">What is Pervasive Insights™?</a><a href="/how-much-research-do-you-need">How much existing research do you need?</a><a href="/synthetic-panel-calibration">How is a synthetic panel calibrated?</a><a href="/synthetic-vs-traditional-panels">Synthetic vs. traditional panels</a><a href="/synthetic-research-accuracy">How accurate are synthetic respondents?</a><a href="/synthetic-research-cpg">Synthetic research for CPG brands</a><a href="/synthetic-panel-methodology-qa">Methodology Q&amp;A</a></div>
+<div class="answers-row"><span>Questions we get asked:</span><a href="/what-is-pervasive-insights">What is Pervasive Insights™?</a><a href="/how-much-research-do-you-need">How much existing research do you need?</a><a href="/synthetic-panel-calibration">How is a synthetic panel calibrated?</a><a href="/synthetic-vs-traditional-panels">Synthetic vs. traditional panels</a><a href="/synthetic-research-accuracy">How accurate are synthetic respondents?</a><a href="/synthetic-research-cpg">Synthetic research for CPG brands</a><a href="/synthetic-panel-methodology-qa">Methodology Q&amp;A</a><a href="/esomar-20-questions">ESOMAR 20 questions, answered</a><a href="/questions-to-ask-a-synthetic-research-vendor">What to ask any synthetic research vendor</a></div>
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
@@ -939,6 +1032,23 @@
 </footer>
 
 <script>
+
+  /* PI_UTM_CAPTURE - fill the hidden utm fields from the query string */
+  (function(){
+    var q = new URLSearchParams(window.location.search);
+    ['utm_source','utm_medium','utm_campaign'].forEach(function(k){
+      var el = document.getElementById(k);
+      if (el && q.get(k)) el.value = q.get(k);
+    });
+  })();
+  /* conversion event - each call is inert unless its id is set in config.js */
+  function piTrackContactConversion(){
+    var c = window.PI_CONFIG || {};
+    if (c.GA_MEASUREMENT_ID && window.gtag) gtag('event','generate_lead',{event_category:'contact'});
+    if (c.UET_TAG_ID && window.uetq) window.uetq.push('event','contact_submit',{});
+    if (c.OPENAI_PIXEL_ID && window.openai && window.openai.track) window.openai.track('Lead');
+  }
+
   async function handlePIContactSubmit(event) {
     event.preventDefault();
     const form = event.target;
@@ -954,6 +1064,7 @@
         body: JSON.stringify(payload),
       });
       if (res.ok) {
+        piTrackContactConversion();
         form.innerHTML = '<div style="padding: 32px; text-align: center; color: var(--text-soft);"><strong style="color: var(--accent); font-size: 18px;">Thanks - your message is on its way.</strong><br><br>We will get back to you within 2 business days.</div>';
       } else {
         if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalLabel; }
