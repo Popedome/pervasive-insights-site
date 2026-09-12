@@ -9,7 +9,7 @@ pervasive-insights-site-deploy/
 ├── index.html                  single-page site (was pervasive_insights_site.html)
 ├── site_pi_logo.svg            PI logo, transparent, dark-mode colors
 ├── site_crs_logo.svg           CRS logo (footer link), transparent, dark-mode colors
-├── site_building.jpg           PENDING — Brian to provide
+├── site_building.jpg           PENDING — to be provided
 ├── README.md                   this file
 └── cloudflare-worker/
     ├── pi-contact-form.js      contact form handler Worker
@@ -64,7 +64,7 @@ Common edits:
 
 ## Form handler details
 
-The Worker receives JSON `{ name, email, company, message }`, validates, and emails the destination address (default `popedome@gmail.com`, override via `wrangler.toml [vars] DESTINATION_EMAIL`).
+The Worker receives JSON `{ name, email, company, message }`, validates, and emails the destination address (set via `wrangler.toml [vars] DESTINATION_EMAIL`).
 
 CORS allowlist in the Worker includes:
 - `https://pervasiveinsights.ai`
@@ -97,4 +97,4 @@ Swapped the five area tiles to use the actual onboarding-infographic illustratio
 
 ## 2026-09-07 restructure
 
-The portal is now presented as one part of the **Pervasive Insights suite of City Research Solutions** (research library, calibrated synthetic panel, competitive intelligence). Added a `#suite` section before About with links to the three tool pages on cityresearchsolutions.com, a nav item "The full suite", one sentence in About, and a new footer line. The six SEO answer pages in `pervasiveinsights-ai-pages/` should be deployed under this site (see `README_FOR_DEPLOY.md` there). Deployment is Brian's, with Claude Code.
+The portal is now presented as one part of the **Pervasive Insights suite of City Research Solutions** (research library, calibrated synthetic panel, competitive intelligence). Added a `#suite` section before About with links to the three tool pages on cityresearchsolutions.com, a nav item "The full suite", one sentence in About, and a new footer line. The six SEO answer pages in `pervasiveinsights-ai-pages/` should be deployed under this site (see `README_FOR_DEPLOY.md` there). Deployment is handled by the site owner.

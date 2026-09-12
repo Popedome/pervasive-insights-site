@@ -10,7 +10,7 @@
  * Required Wrangler binding (in wrangler.toml):
  *   [[send_email]]
  *   name = "PI_INBOX"
- *   destination_address = "popedome@gmail.com"   # set to Brian's chosen inbox
+ *   destination_address = "info@cityresearchsolutions.com"   # the contact inbox
  *
  * NOTE: Cloudflare Email Workers requires the destination_address to be
  * VERIFIED at https://dash.cloudflare.com → Email → Email Workers → Destination
