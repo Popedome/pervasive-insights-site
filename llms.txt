@@ -19,5 +19,9 @@
 - [ESOMAR 20 questions, answered](https://pervasiveinsights.ai/esomar-20-questions)
 - [What to ask any synthetic research vendor](https://pervasiveinsights.ai/questions-to-ask-a-synthetic-research-vendor)
 
+## Research notes
+- [Digital twins are funhouse mirrors. Calibration is how you straighten the glass.](https://pervasiveinsights.ai/digital-twins-funhouse-mirrors-calibration): the Science Advances digital twins study and why calibration against a client's own research is the fix.
+- [Synthetic research this week, 21 September 2026](https://pervasiveinsights.ai/synthetic-research-news-september-21-2026): peer review, silicon sampling limits, Qualtrics, and the 97 versus 8 adoption gap.
+
 ## Contact
 https://pervasiveinsights.ai/#contact · info@cityresearchsolutions.com · +1 608-314-8493
