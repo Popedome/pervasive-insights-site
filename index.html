@@ -95,6 +95,10 @@
   .cmp-foot .sw { display:inline-block; width:8px; height:8px; border-radius:2px; margin-right:4px; vertical-align:middle; }
   .cmp-foot .sw.g { background:#1f7a3a; } .cmp-foot .sw.a { background:#b7791f; }
   .hero-cardnote { font-size:12px; color: var(--text-light-muted); margin-top:12px; text-align:center; }
+  .cmp-card .cutby button.tab { font: inherit; font-size:10px; font-weight:600; cursor:pointer; }
+  .cmp-card .cutby button.tab:not(.on) { background:#fff; border-color:#d5dde5; color:#3b4a5a; }
+  .cmp-card .cutby button.tab:focus-visible { outline:2px solid #0ea5e9; outline-offset:2px; }
+  .cmp-card.nocmp .cmp-table .hu, .cmp-card.nocmp .cmp-table .dl, .cmp-card.nocmp .cmp-only { display:none; }
   .cmp-card .stim-row { display:flex; gap:8px; margin:8px 0 10px; } .cmp-card .stim-row img { flex:1; min-width:0; height:74px; object-fit:contain; background:#f6f9fc; border:1px solid #e3e8ee; border-radius:5px; padding:4px; }
   .answers-row { max-width:1240px; margin:0 auto; padding:26px 32px 34px; display:flex; flex-wrap:wrap; gap:10px; align-items:center; font-size:13px; color: var(--text-light-muted); }
   .answers-row a { border:1px solid var(--border-dark); border-radius:999px; padding:6px 12px; color: var(--text-light); text-decoration:none; font-size:12.5px; }
@@ -448,8 +452,8 @@
     <a href="https://cityresearchsolutions.com/pervasive-insights.html" class="hero-eyebrow">The AI suite of <strong>City Research Solutions</strong> &middot; human research since 1979 &rarr;</a>
     <h1>A synthetic research panel built on human insights.</h1>
     <p class="hero-kicker">Calibrated to your fielded studies, error published.</p>
-    <p class="sub pi-definition">Pervasive Insights™ is a synthetic research panel built on a client's own human research: a searchable library of every study the client has run, and synthetic respondents calibrated to how that client's real customers answered, with the error reported topic by topic. It is a City Research Solutions product. City Research has run consumer research since 1979.</p>
-    <p class="sub">Most synthetic-consumer tools generate respondents from a demographic profile, with no evidence that they answer the way your actual customers do. <strong style="color: var(--accent); font-weight: 700; letter-spacing: 0.5px;">PERVASIVE INSIGHTS™</strong> is built the other way round: a synthetic panel calibrated to how <strong style="color: var(--text-light); font-weight: 700;">YOUR</strong> customers actually answered in 40+ years of human research, with the calibration error published topic by topic — plus every study you have ever run, in one searchable corpus. Interview it, survey it, or sit it around a table, in minutes.</p>
+    <p class="sub pi-definition">Pervasive Insights™ is an insights system including a synthetic research panel built on a client's own human research: a searchable library of every study the client has run, and synthetic respondents calibrated to how that client's real customers answered, with the error reported topic by topic. It is a City Research Solutions product. City Research has run consumer research since 1979.</p>
+    <p class="sub">Most synthetic-consumer tools generate respondents from a demographic profile, with no evidence that they answer the way your actual customers do. <strong style="color: var(--accent); font-weight: 700; letter-spacing: 0.5px;">PERVASIVE INSIGHTS™</strong> is built the other way round: a synthetic panel calibrated to how <strong style="color: var(--text-light); font-weight: 700;">YOUR</strong> customers actually answered, with the calibration error published topic by topic — plus every study you have ever run, in one searchable corpus. Interview it, survey it, or sit it around a table, in minutes.</p>
     <div class="cta-row">
       <a href="#contact" class="cta-primary">Schedule a 30-minute walkthrough</a>
       <a href="#samples" class="cta-secondary">See sample outputs ↓</a>
@@ -461,14 +465,14 @@
       <div class="card-body">
         <div class="qline">Q1: Which of these fresh dog-food packages would you pick up first? <span class="qmeta">200 synthetic respondents · shown the four packages below</span></div>
         <div class="stim-row"><img src="df_canine.jpg" alt="Canine Choice"><img src="df_happy.jpg" alt="Happy Paws"><img src="df_natures.jpg" alt="Nature's Harvest"><img src="df_cascade.jpg" alt="Cascade Provisions"></div>
-        <div class="cutby"><span>Cut by:</span><span class="tab">Overall</span><span class="tab">By segment</span><span class="tab on">&#9635; Compare to human</span></div>
-        <div class="cmp-evidence">
+        <div class="cutby"><span>Cut by:</span><span class="tab">Overall</span><span class="tab">By segment</span><button type="button" class="tab on" id="cmp-toggle" aria-pressed="true">&#9635; Compare to human</button></div>
+        <div class="cmp-evidence cmp-only">
           <div class="ev-title">Closest comparable human question</div>
           <div class="ev-q">Which of these dog-food packages would you pick up first? (shown four shelf packages)</div>
           <div class="ev-src">Package appeal · Fresh Pet Food Concept Test 2025 · n=820 · q14 · single_select_pct</div>
         </div>
         <table class="cmp-table">
-          <thead><tr><th>Package</th><th>Synthetic</th><th>Human</th><th>&Delta;</th></tr></thead>
+          <thead><tr><th>Package</th><th>Synthetic</th><th class="hu">Human</th><th class="dl">&Delta;</th></tr></thead>
           <tbody>
           <tr><td class="it">Canine Choice</td><td class="sy">34% <small>n=68</small></td><td class="hu">32.1%</td><td class="dl" style="color:#1f7a3a">+1.9</td></tr>
           <tr><td class="it">Happy Paws</td><td class="sy">29% <small>n=58</small></td><td class="hu">27.6%</td><td class="dl" style="color:#1f7a3a">+1.4</td></tr>
@@ -476,7 +480,7 @@
           <tr><td class="it">Cascade Provisions</td><td class="sy">16% <small>n=32</small></td><td class="hu">16.4%</td><td class="dl" style="color:#1f7a3a">-0.4</td></tr>
           </tbody>
         </table>
-        <div class="cmp-foot"><span><span class="sw g"></span>within 5 pts</span><span><span class="sw a"></span>beyond 5 pts</span><span>Avg &Delta; 1.6 pts · Calibration state: <b>Measured</b></span></div>
+        <div class="cmp-foot cmp-only"><span><span class="sw g"></span>within 5 pts</span><span><span class="sw a"></span>beyond 5 pts</span><span>Avg &Delta; 1.6 pts · Calibration state: <b>Measured</b></span></div>
       </div>
     </div>
     <p class="hero-cardnote">Your own human data, layered into every synthetic result. Illustrative figures, sample conditions.</p>
@@ -1102,6 +1106,19 @@
       }, { threshold: 0.12, rootMargin: '0px 0px -7% 0px' });
       els.forEach(function (el, i) { el.setAttribute('data-rd', (i % 3) * 70); io.observe(el); });
     } catch (err) { /* fail open: leave everything visible */ }
+  })();
+</script>
+<script>
+  (function () {
+    var btn = document.getElementById('cmp-toggle');
+    if (!btn) return;
+    var card = btn.closest('.cmp-card');
+    btn.addEventListener('click', function () {
+      var on = btn.getAttribute('aria-pressed') !== 'true';
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      btn.classList.toggle('on', on);
+      card.classList.toggle('nocmp', !on);
+    });
   })();
 </script>
 </body>
