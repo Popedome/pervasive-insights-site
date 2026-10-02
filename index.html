@@ -391,7 +391,6 @@
     "@type": "Organization",
     "name": "City Research Solutions LLC",
     "url": "https://cityresearchsolutions.com/",
-    "foundingDate": "1979",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "8383 Greenway Blvd, Suite 600",
@@ -432,9 +431,16 @@
  if(c.GOOGLE_SITE_VERIFICATION){var m=document.createElement('meta');m.name='google-site-verification';m.content=c.GOOGLE_SITE_VERIFICATION;document.head.appendChild(m);}
  if(c.BING_SITE_VERIFICATION){var m2=document.createElement('meta');m2.name='msvalidate.01';m2.content=c.BING_SITE_VERIFICATION;document.head.appendChild(m2);}
  window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;
- if(c.GA_MEASUREMENT_ID){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+c.GA_MEASUREMENT_ID;document.head.appendChild(s);gtag('js',new Date());gtag('config',c.GA_MEASUREMENT_ID);}
+ var gid=c.GOOGLE_TAG_ID||c.GA_MEASUREMENT_ID;
+ if(gid){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+gid;document.head.appendChild(s);gtag('js',new Date());gtag('config',gid);}
  if(c.UET_TAG_ID){(function(w,d,t,r,u){w[u]=w[u]||[];w[u].push({ti:c.UET_TAG_ID,enableAutoSpaTracking:true});var f=d.getElementsByTagName(t)[0],j=d.createElement(t);j.async=1;j.src='//bat.bing.com/bat.js';f.parentNode.insertBefore(j,f);})(window,document,'script',null,'uetq');}
- if(c.OPENAI_PIXEL_ID){var o=document.createElement('script');o.async=true;o.src='https://d.openai.com/pixel.js?id='+c.OPENAI_PIXEL_ID;document.head.appendChild(o);}
+ /* OpenAI Ads pixel is DELIBERATELY ABSENT from this page. Brian Pope's ruling,
+    2 Oct 2026: page views only, automatic advanced matching off. Measured the
+    same day, bzrcdn.openai.com/pixel-config/v1/<pixelId>.json returns
+    {"automatic_advanced_matching_enabled":true} for this pixel, and that is a
+    server-side Ads Manager setting that cannot be turned off from site code.
+    This page holds the contact form (name, company, email), so per the stated
+    fallback the pixel stays off it. Re-enable only once that flag reads false. */
 })();
 </script>
 </head>
@@ -458,10 +464,10 @@
 <!-- HERO -->
 <div class="hero">
   <div>
-    <a href="https://cityresearchsolutions.com/pervasive-insights.html" class="hero-eyebrow">The AI suite of <strong>City Research Solutions</strong> &middot; human research since 1979 &rarr;</a>
+    <a href="https://cityresearchsolutions.com/pervasive-insights.html" class="hero-eyebrow">The AI suite of <strong>City Research Solutions</strong> &rarr;</a>
     <h1>A synthetic research panel built on human insights.</h1>
     <p class="hero-kicker">Calibrated to your fielded studies, error published.</p>
-    <p class="sub pi-definition">Pervasive Insights™ is an insights system including a synthetic research panel built on a client's own human research: a searchable library of every study the client has run, and synthetic respondents calibrated to how that client's real customers answered, with the error reported topic by topic. It is a City Research Solutions product. City Research has run consumer research since 1979.</p>
+    <p class="sub pi-definition">Pervasive Insights™ is an insights system including a synthetic research panel built on a client's own human research: a searchable library of every study the client has run, and synthetic respondents calibrated to how that client's real customers answered, with the error reported topic by topic. It is a City Research Solutions product.</p>
     <p class="sub">Most synthetic-consumer tools generate respondents from a demographic profile, with no evidence that they answer the way your actual customers do. <strong style="color: var(--accent); font-weight: 700; letter-spacing: 0.5px;">PERVASIVE INSIGHTS™</strong> is built the other way round: a synthetic panel calibrated to how <strong style="color: var(--text-light); font-weight: 700;">YOUR</strong> customers actually answered, with the calibration error published topic by topic, plus every study you have ever run, in one searchable corpus. Interview it, survey it, or sit it around a table, in minutes.</p>
     <div class="cta-row">
       <a href="#contact" class="cta-primary">Schedule a 30-minute walkthrough</a>
@@ -723,7 +729,7 @@
   <div class="container">
     <div class="section-label">Calibration check</div>
     <h2 class="section-title">The question isn't "can you build a synthetic panel." It's "does it answer like my customers."</h2>
-    <p class="section-intro">Anyone can stand up a synthetic panel. Pervasive Insights™ is calibrated to your own commissioned research, and the calibration is auditable. Your human data is layered into every result: where you have asked the same question before, the synthetic result comes back cell by cell against the human answer; where you have asked the same <em>type</em> of question many times, it is placed on the range your real customers gave, and anything outside that range is held for review rather than reported. Below: the same questions run through human respondents and through the synthetic panel. Distributions match within ~3 percentage points on every cell.</p>
+    <p class="section-intro">Anyone can stand up a synthetic panel. Pervasive Insights™ is calibrated to your own commissioned research, and the calibration is auditable. Your human data is layered into every result: where you have asked the same question before, the synthetic result comes back cell by cell against the human answer; where you have asked the same <em>type</em> of question many times, it is placed on the range your real customers gave, and anything outside that range is held for review rather than reported. Below: the same questions run through human respondents and through the synthetic panel. On one real calibration with the client removed, 92% of 95 cells came within tolerance, with an average gap of about 3.5 points.</p>
     <p class="section-intro pi-ceiling">For scale: when a real survey is split randomly in half, the two halves agree within 5 points on about 85% of answers (58 consumer studies, 41,340 answer pairs). No synthetic method can beat a human study against itself, and Pervasive Insights™ reports both numbers on the same report card.</p>
 
     <div class="comparison-grid">
@@ -937,7 +943,7 @@
   <div class="container">
     <div class="section-label">The full suite</div>
     <h2 class="section-title">The portal is one part of a research firm's toolkit.</h2>
-    <p class="section-intro">Pervasive Insights™ is the AI suite of City Research Solutions, a consumer research firm that has fielded surveys and focus groups since 1979. The library and the calibrated panel you see here sit alongside a third tool, and all three draw on the same material: research you have fielded with real people.</p>
+    <p class="section-intro">Pervasive Insights™ is the AI suite of City Research Solutions, a consumer research firm. The library and the calibrated panel you see here sit alongside a third tool, and all three draw on the same material: research you have fielded with real people.</p>
     <div class="receipts">
       <div class="receipt">
         <div class="number" style="font-size:22px;">Your research, working</div>
@@ -953,7 +959,7 @@
       </div>
       <div class="receipt">
         <div class="number" style="font-size:22px;">Human research, first</div>
-        <div class="label"><strong>City Research Solutions.</strong> In-facility, online, real-time, retail and quantitative research, in person and online, since 1979. <a href="https://cityresearchsolutions.com" style="color: var(--accent); text-decoration: none; font-weight: 600;">Visit CRS &rarr;</a></div>
+        <div class="label"><strong>City Research Solutions.</strong> In-facility, online, real-time, retail and quantitative research, in person and online. <a href="https://cityresearchsolutions.com" style="color: var(--accent); text-decoration: none; font-weight: 600;">Visit CRS &rarr;</a></div>
       </div>
     </div>
     <div class="services-row">
@@ -1061,9 +1067,12 @@
   /* conversion event - each call is inert unless its id is set in config.js */
   function piTrackContactConversion(){
     var c = window.PI_CONFIG || {};
-    if (c.GA_MEASUREMENT_ID && window.gtag) gtag('event','generate_lead',{event_category:'contact'});
+    if ((c.GOOGLE_TAG_ID || c.GA_MEASUREMENT_ID) && window.gtag) gtag('event','generate_lead',{event_category:'contact'});
     if (c.UET_TAG_ID && window.uetq) window.uetq.push('event','contact_submit',{});
-    if (c.OPENAI_PIXEL_ID && window.openai && window.openai.track) window.openai.track('Lead');
+    /* No OpenAI call here, deliberately. Brian Pope's ruling, 2 October 2026: the
+       OpenAI pixel runs for page views only. A conversion event fired from this
+       form is the one place prospect data could reach OpenAI, so there is no
+       openai.track() call and this comment is here to stop one being added back. */
   }
 
   async function handlePIContactSubmit(event) {
