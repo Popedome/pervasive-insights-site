@@ -5,6 +5,7 @@
 ## Key facts
 - Calibration is per client and per study; one client's data never trains a panel for another.
 - Every result carries a calibration status. Uncalibrated topics return a blank, not a guess. Results outside the human range are held for review.
+- Compare to human (https://pervasiveinsights.ai/#comparison): every synthetic answer is placed against the closest human answers in the client's own past studies, by the same rule, and given a verdict: within range, outside range, or not enough human data to judge, with the sampling math shown. Calibration works in levels, from gold stars, where the client's customers answered the exact question, to halos, where they answered a close relative of it, to the general shape of answers across their own research. Every result is labeled with its level.
 - Calibration fit: over 98% of calibrated cells within 5 points; blind holdout median miss about 6.8 points, 42% of cells within 5.
 - Human ceiling: two random halves of the same survey agree within 5 points on about 85% of answers (58 studies, 41,340 pairs). Synthetic accuracy is always reported next to that number.
 - Not for: high-stakes go/no-go decisions, regulated or legal claims, novel topics with no calibration data.
